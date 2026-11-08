@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionManifest Version="6.0" ExtensionBundleId="com.tz.quickbridgetitler" ExtensionBundleVersion="9.8.7" ExtensionBundleName="Quick Bridge Titler" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <ExtensionList>
+        <Extension Id="com.tz.quickbridgetitler.panel" Version="9.8.7" />
+    </ExtensionList>
+    <ExecutionEnvironment>
+        <HostList>
+            <Host Name="PPRO" Version="[9.0,99.9]" />
+        </HostList>
+        <LocaleList>
+            <Locale Code="All" />
+        </LocaleList>
+        <RequiredRuntimeList>
+            <RequiredRuntime Name="CSXS" Version="6.0" />
+        </RequiredRuntimeList>
+    </ExecutionEnvironment>
+    <DispatchInfoList>
+        <Extension Id="com.tz.quickbridgetitler.panel">
+            <DispatchInfo>
+                <Resources>
+                    <MainPath>./index.html</MainPath>
+                    <ScriptPath>./host/premiere.jsx</ScriptPath>
+                    <CEFCommandLine>
+                        <Parameter>--enable-nodejs</Parameter>
+                        <Parameter>--mixed-context</Parameter>
+                    </CEFCommandLine>
+                </Resources>
+                <Lifecycle>
+                    <AutoVisible>true</AutoVisible>
+                </Lifecycle>
+                <UI>
+					<!-- Pannel (Docable)/Modelss (Window) -->
+                    <Type>Modeless</Type>
+                    <Menu>Quick Bridge Titler</Menu>
+                    <Geometry>
+                        <Size>
+                            <Width>350</Width>
+                            <Height>600</Height>
+                        </Size>
+                        <MinSize>
+                            <Width>350</Width>
+                            <Height>500</Height>
+                        </MinSize>
+                        <MaxSize>
+                            <Width>800</Width>
+                            <Height>700</Height>
+                        </MaxSize>
+                    </Geometry>
+                </UI>
+            </DispatchInfo>
+        </Extension>
+    </DispatchInfoList>
+</ExtensionManifest>
